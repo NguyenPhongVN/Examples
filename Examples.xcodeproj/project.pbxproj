@@ -17,6 +17,10 @@
 		9AB554562D299B1300B3188C /* MijickTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB554552D299B1300B3188C /* MijickTimer */; };
 		9AB554592D299B4600B3188C /* MijickGridView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB554582D299B4600B3188C /* MijickGridView */; };
 		9AB5545C2D299B8800B3188C /* MijickNavigationView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB5545B2D299B8800B3188C /* MijickNavigationView */; };
+		9AB554632D29B7C000B3188C /* MijickCalendarView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB554622D29B7C000B3188C /* MijickCalendarView */; };
+		9AB554662D29B84500B3188C /* ProgressIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB554652D29B84500B3188C /* ProgressIndicatorView */; };
+		9AB554692D29B85A00B3188C /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB554682D29B85A00B3188C /* ActivityIndicatorView */; };
+		9AB5546C2D29B8D700B3188C /* ExyteGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB5546B2D29B8D700B3188C /* ExyteGrid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 				9AB5545C2D299B8800B3188C /* MijickNavigationView in Frameworks */,
 				9AB5544A2D29950400B3188C /* SwiftUIKit in Frameworks */,
 				9AB554562D299B1300B3188C /* MijickTimer in Frameworks */,
+				9AB554632D29B7C000B3188C /* MijickCalendarView in Frameworks */,
+				9AB554662D29B84500B3188C /* ProgressIndicatorView in Frameworks */,
+				9AB554692D29B85A00B3188C /* ActivityIndicatorView in Frameworks */,
+				9AB5546C2D29B8D700B3188C /* ExyteGrid in Frameworks */,
 				9AB5544D2D29953C00B3188C /* PopupView in Frameworks */,
 				9AB554502D29956800B3188C /* Pow in Frameworks */,
 				9AB554442D29941200B3188C /* ViewKit in Frameworks */,
@@ -98,6 +106,10 @@
 				9AB554552D299B1300B3188C /* MijickTimer */,
 				9AB554582D299B4600B3188C /* MijickGridView */,
 				9AB5545B2D299B8800B3188C /* MijickNavigationView */,
+				9AB554622D29B7C000B3188C /* MijickCalendarView */,
+				9AB554652D29B84500B3188C /* ProgressIndicatorView */,
+				9AB554682D29B85A00B3188C /* ActivityIndicatorView */,
+				9AB5546B2D29B8D700B3188C /* ExyteGrid */,
 			);
 			productName = Examples;
 			productReference = 9AB554252D2983C800B3188C /* Examples.app */;
@@ -137,6 +149,10 @@
 				9AB554542D299B1300B3188C /* XCRemoteSwiftPackageReference "Timer" */,
 				9AB554572D299B4600B3188C /* XCRemoteSwiftPackageReference "GridView" */,
 				9AB5545A2D299B8800B3188C /* XCRemoteSwiftPackageReference "NavigationView" */,
+				9AB554612D29B7C000B3188C /* XCRemoteSwiftPackageReference "CalendarView" */,
+				9AB554642D29B84500B3188C /* XCRemoteSwiftPackageReference "ProgressIndicatorView" */,
+				9AB554672D29B85A00B3188C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				9AB5546A2D29B8D700B3188C /* XCRemoteSwiftPackageReference "Grid" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9AB554262D2983C800B3188C /* Products */;
@@ -440,6 +456,38 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		9AB554612D29B7C000B3188C /* XCRemoteSwiftPackageReference "CalendarView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mijick/CalendarView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		9AB554642D29B84500B3188C /* XCRemoteSwiftPackageReference "ProgressIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ProgressIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		9AB554672D29B85A00B3188C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		9AB5546A2D29B8D700B3188C /* XCRemoteSwiftPackageReference "Grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Grid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -491,6 +539,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9AB5545A2D299B8800B3188C /* XCRemoteSwiftPackageReference "NavigationView" */;
 			productName = MijickNavigationView;
+		};
+		9AB554622D29B7C000B3188C /* MijickCalendarView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB554612D29B7C000B3188C /* XCRemoteSwiftPackageReference "CalendarView" */;
+			productName = MijickCalendarView;
+		};
+		9AB554652D29B84500B3188C /* ProgressIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB554642D29B84500B3188C /* XCRemoteSwiftPackageReference "ProgressIndicatorView" */;
+			productName = ProgressIndicatorView;
+		};
+		9AB554682D29B85A00B3188C /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB554672D29B85A00B3188C /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		9AB5546B2D29B8D700B3188C /* ExyteGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB5546A2D29B8D700B3188C /* XCRemoteSwiftPackageReference "Grid" */;
+			productName = ExyteGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

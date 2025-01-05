@@ -8,6 +8,7 @@
 import SwiftUI
 import Pow
 import MijickPopups
+import MijickNavigationView
 import PopupView
 import Xcore
 import SwiftUIKit
@@ -16,14 +17,13 @@ import SwiftUIKit
 struct ExamplesApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//          RootView()
-          ContentView2()
+          RootView()
+            .implementNavigationView()
         }
     }
 }
 
-struct RootView: View {
+struct ContentView3: NavigatableView {
   
   @State var switchingImages: [String] = Array(1...5).map(\.description)
   @State var randomInt: Int = 0
@@ -53,9 +53,10 @@ struct RootView: View {
   }
 }
 
-struct ContentView2: View {
+struct ContentView2: NavigatableView {
   
-  private let colors = Array(1...5).map(\.description).map({Image($0).resizable()})
+//  private let colors = Array(1...5).map(\.description).map({Image($0).resizable()})
+  private let colors = [Color.red, Color.green, Color.blue, Color.teal, Color.yellow]
   private let maxScaleEffect: CGFloat = 1
   private let minScaleEffect: CGFloat = 0
   private let animationDuration = 2.0
@@ -75,15 +76,14 @@ struct ContentView2: View {
         if shouldTransition {
           transitioningColor
             .scaledToFit()
-          //            .frame(200)
-          //          .scaleEffect(shouldTransition ? maxScaleEffect : minScaleEffect)
-          //            .opacity(shouldTransition ? 1 : 0)
-          //            .transition(.movingParts.wipe(
-          //              angle: .degrees(-45),
-          //              blurRadius: 50
-          //            ))
-          //            .transition(.movingParts.wipe(edge: .leading))
-          //            .modifier(RippleEffect(at: CGPoint(x: 100, y: 100), trigger: colorIndex))
+//            .modifier(RippleEffect(at: UIScreen.main.bounds.origin, trigger: colorIndex))
+//                    .scaleEffect(shouldTransition ? maxScaleEffect : minScaleEffect)
+//                      .opacity(shouldTransition ? 1 : 0)
+//                      .transition(.movingParts.wipe(
+//                        angle: .degrees(-45),
+//                        blurRadius: 50
+//                      ))
+//                      .transition(.movingParts.wipe(edge: .leading))
           //            .transition(.movingParts.snapshot)
           //            .transition(.movingParts.iris(
           //              blurRadius: 50
@@ -92,10 +92,10 @@ struct ContentView2: View {
           //            .transition(
           //              .movingParts.vanish(.white)
           //            )
-          //            .transition(.movingParts.filmExposure)
-            .transition(.movingParts.clock(
-              blurRadius: 50
-            ))
+                      .transition(.movingParts.filmExposure)
+//            .transition(.movingParts.clock(
+//              blurRadius: 50
+//            ))
         }
         
         
@@ -117,11 +117,11 @@ struct ContentView2: View {
     }
   }
   
-  private var previousColor: Image {
+  private var previousColor: some View {
     colors[colorIndex%colors.count]
   }
   
-  private var transitioningColor: Image {
+  private var transitioningColor: some View {
     colors[(colorIndex+1)%colors.count]
   }
 }
